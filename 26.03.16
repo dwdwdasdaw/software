@@ -1,0 +1,382 @@
+텍스트 제목 만들기
+기본형: <h/n>제목</hn>
+제목을 표시할 때 사용태그
+글자 크기: h1>h2>h3 ....
+&nbsp; - 칸삽인 특부문자(스페이스바 역할)
+
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 레드향이라 불린다.</p>
+    <p>
+      레드향은 한라봉과 귤을 교배한 것으로 <br />일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+    </p>
+    <p>
+      비타민 C와 비타민 P가 풍부해<br /> 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+    </p>
+    <h2>레드향 샐러드 레시피</h2>
+    <h2>상품 구성</h2>
+
+
+
+<hr> : 가로줄 만들기 (분위기 전환)
+<strong>,<b> : 글자 굵기 
+<em>, <i>, cite> : 이탤릭 체로 표시(기울기 표시)
+<ol> (type="1","a","A","I") 로 변경해서 가능 / 숫자 순서
+  <li>
+<ul> (type="disc", "dircle","square" 다른 기호로 변경 가능 / 아이콘 목록
+  <li>
+
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+</head>
+<body>
+  <h1>레드향</h1>
+  <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+  <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+  <p><i>비타민 C</i>와 <i>비타민 P</i>가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
+
+  <h2>레드향 샐러드 레시피</h2> 
+  <p><b>재료 : </b>레드향 1개, 아보카도 1개, 토마토 1개, 샐러드 채소 30g</p>
+  <p><b>드레싱 : </b>올리브유 1큰술, 레몬즙 2큰술, 꿀 1큰술, 소금 약간</p>  
+  <!-- Do it! 순서 목록  작성하기 -->
+<ul type="disc" > 
+<li>html</li>
+<li>css</li>
+<li>javascript</li>
+  </ul>
+  <h2>상품 구성</h2>
+</body>
+</html>
+
+
+
+<dl>: 제목
+<dt>: 값
+<dd>: 정보(내용)
+<table>: 표만들기, <table border>; 테이블 테두리 만들기
+<caption>: 표제목
+<tr>: 행
+<td>: 셀
+<th>: 제목 셀
+<tr colspan=2>: 열병합 바로 밑에 주석처리
+<td rowspan=2>: 행 병합 밑에 있는 다음 행 주석처리
+  <!-- Do it! 순서 목록을 순서 없는 목록으로 바꾸기 -->
+   <dl>
+<dt>선물용 3kg</dt>
+<dd>소과 13~16kg</dd>
+<dd>중과 10~12kg</dd>
+   </dl>
+      <dl>
+<dt>선물용 5kg</dt>
+<dd>중과 15~18kg</dd>
+dl: 목록 제목
+dt: 값
+dd: 정보(내용)
+
+
+
+ <h2>상품 구성</h2>
+  <!-- Do it! 표의 구조 만들기 -->
+  <table>
+    <caption>선물용과 가정용 상품 구성</caption>
+    <colgroup>
+      <col style="width: 100px">
+      <col style="background-color: #eee"/>
+      <col span="2" style="width: 150px">   (span으로 같은 거를 묶어서 사용)
+      <!--<col style="width: 150px">-->   (같은 거는 주석처리)
+
+
+<img src="images/tangerines.jpg" (이미지 가져오는 경로/이미지 이름)
+<figure> 이미지 설명 붙이기
+    <img src="images/spring.png" alt="제주의 봄">
+    <figcaption>가장 먼저 봄을 맞이하는 제주도</figcaption> 이미지 내용 넣기
+    
+        <!-- Do it!  '레드향' 제목 위에 images/tangerines.jpg 삽입하기 -->
+   <img 
+   src="images/tangerines.jpg" (이미지 가져오는 경로/이미지 이름)
+    alt="레드향"  (시각장애인을 위한 읽음표시?)
+    width="50%"  (가로길이 조정)
+    height="20%"/> (세로길이 조정)
+
+  <!-- Do it! 각 이미지마다 설명글 붙이기 -->
+  <figure>
+    <img src="images/spring.png" alt="제주의 봄">
+    <figcaption>가장 먼저 봄을 맞이하는 제주도</figcaption>
+  </figure>
+  <figure>
+    <img src="images/summer.png" alt="제주의 여름">
+    <figcaption>뜨거운 태양을 닮은 해바라기</figcaption>
+  </figure>
+  <figure>
+    <img src="images/fall.png" alt="제주의 가을">
+    <img src="images/winter.png" alt="제주의 겨울">
+    <figcaption>제주도의 가을과 겨울</figcaption> 두개이미지를 한개로 모아서 넣기
+  </figure>
+</body>
+</html>
+
+
+<object data="product.pdf" width="800"height="900"></object> 파일 가져오기
+<audio src="medias/spring.mp3" controls></audio> 오디오 가져오기 컨트롤스 필수!
+  <video src="medias/salad.mp4" controls width="700"muted></video> 비디오 가져오기
+  <embed>로 동일 명령어로 사용 가능 (자동재생)
+
+  <title>멀티미디어 파일 삽입하기</title>
+</head>
+<body>
+  <h1>웹 문서에 PDF 파일 삽입하기</h1>
+  <!-- Do it! object 태그를 사용해 product.pdf 파일 삽입하기 -->
+   <!--<object data="product.pdf" width="800"height="900"></object> <br>-->
+   <br/>
+<audio src="medias/spring.mp3" controls></audio>
+  <video src="medias/salad.mp4" controls poster="images/salad.jpg" width="700"muted></video>
+  ㄴcontrols poster="images/salad.jpg" -> 동영상 첫화면 사진(썸네일)
+</body>
+</html>
+
+ <!-- Do it! 이미지 링크 삽입하기, 새로운 창에 내용 띄우기 -->
+    <a href="order.html" target="blank"><img src="images/tangerines.jpg" alt="레드향"></a> 사진에다가 링크 넣기
+
+ <!-- Do it! 텍스트 링크 삽입하기  -->
+      <p><a href="order.html" target="_blank">주문하기</a></p> 새롭게 주문하기 버튼 생성하기
+
+<h2 id="recipe">레드향 샐러드 레시피</h2> id 생성
+<li><a href="#red">레드향</a></li> 해당 id로 이동
+
+ <h2 id="schedule">일정</h2> (다른링크에서 만듬)
+ <p><a href="poster-image.html#schedule">탐라굿 입춘굿 일정</a></p> 다른링크로 이동하기
+
+
+과제물 vs code 완성형
+
+<!DOCTYPE html>
+<head lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄깅이의 세계</title>
+</head>
+<head>
+<h1/n><div id="맨위"> 햄깅의 소개 </h1>
+<p>최애 이모티콘 소개.</p>
+</head>
+
+<section>
+        <h2>햄깅</h2>
+        <ul>
+            <li><strong>탄생일:</strong> 2020년4월 추정</li>
+            <li><strong>종족:</strong> 햄스터</li>
+            <li><strong>분야:</strong> 이모티콘,굿즈</li>
+        </ul>
+    </section>
+<section>
+        <h2>햄깅이의 특징</h2>
+        <p>
+            그림판으로 <b>대충</b> 그린듯한 그림체, jpg 파일 특성으로 인한 <b>짤</b> 풍화,
+            <br>
+            굴림체 등이 어우러져 짤방으로 널리 쓰이고 있다.
+            <br>
+            다음과 같은 특유의 ㉦ ω ㉦ 표정을 유지하고 있고 늘상 벤츠 로고 모양의 ㉦ 이러한 눈을 갖고 있다.
+        </p>
+        <a href="https://namu.wiki/w/%ED%96%84%EA%B9%85"><img src="햄깅/댄스깅.png" alt="댄스깅"></a><dl>햄깅</dl>
+          
+    </section>
+<hr>
+<section>
+        <h2>햄깅이 패밀리</h2>
+      
+<table border>
+<tr>
+    <th style="width: 100px;">이름</th>
+    <th style="width: 100px;">종족</th>
+    <th style="width: 100px;">성별</th>
+</tr>
+<tr>
+    <th><a href="햄깅/브이깅.png" target="_blank">햄깅이</a></th>
+    <th>햄스터</th>
+    <th rowspan="2">남자</th>
+</tr>
+<tr>
+    <th><a href="햄깅/햄둥이.jpg" target="_blank">햄둥이</a></th>
+    <th>강아지</th>
+    <!--<th>남자</th>-->
+</tr>
+<tr>
+    <th><a href="햄깅/토낑이.png" target="_blank">토낑이</a></th>
+    <th>토끼</th>
+    <th>여자</th>
+</tr>
+
+</table>
+</section> 
+<hr>
+<video src="햄깅/햄깅샤넬.mp4" controls style="width: 250px;"></video>
+<hr>
+<a href="#맨위"><p>다시 읽어보기</p></a>
+
+
+
+<body>
+    
+</body>
+</html>
+ 
+ai를 통해 꾸밈 버전
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄깅의 세계</title>
+    <style>
+        /* 햄깅 테마 스타일링 */
+        body {
+            font-family: 'Gulim', '굴림', sans-serif; /* 햄깅이의 정체성: 굴림체 */
+            background-color: #fff0f5; /* 연분홍 배경 */
+            color: #333;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ffb6c1;
+        }
+
+        h1 {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        h2 {
+            border-left: 5px solid #ffb6c1;
+            padding-left: 10px;
+            color: #ff69b4;
+        }
+
+        section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 0px #ffb6c1;
+        }
+
+        /* 테이블 꾸미기 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #ffb6c1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #fff0f5;
+        }
+
+        /* 링크 스타일 */
+        a {
+            color: #ff1493;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .top-link {
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header id="맨위">
+    <h1>🐹 햄깅의 소개</h1>
+    <p style="text-align: center;"><b>최애 이모티콘 소개 공간</b></p>
+</header>
+
+<section>
+    <h2>프로필</h2>
+    <ul>
+        <li><strong>탄생일:</strong> 2020년 4월 추정</li>
+        <li><strong>종족:</strong> 햄스터</li>
+        <li><strong>분야:</strong> 이모티콘, 굿즈</li>
+    </ul>
+</section>
+
+<section>
+    <h2>햄깅이의 특징</h2>
+    <p>
+        그림판으로 <b>대충</b> 그린 듯한 그림체, jpg 파일 특성으로 인한 <b>짤</b> 풍화,<br>
+        굴림체 등이 어우러져 짤방으로 널리 쓰이고 있다.<br>
+        특유의 <b>㉦ ω ㉦</b> 표정을 유지하고 있고,<br> 늘상 벤츠 로고 모양의 <b>㉦</b> 눈을 갖고 있다.
+    </p>
+    <div style="text-align: center;">
+        <a href="https://namu.wiki/w/%ED%96%84%EA%B9%85" target="_blank">
+            <img src="햄깅/댄스깅.png" alt="댄스깅">
+        </a>
+        <p><small>▲ 클릭하면 나무위키로 이동!</small></p>
+    </div>
+</section>
+
+<hr>
+
+<section>
+    <h2>햄깅이 패밀리</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>종족</th>
+                <th>성별</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="햄깅/브이깅.png" target="_blank">햄깅이</a></td>
+                <td>햄스터</td>
+                <td rowspan="2">남자</td>
+            </tr>
+            <tr>
+                <td><a href="햄깅/햄둥이.jpg" target="_blank">햄둥이</a></td>
+                <td>강아지</td>
+            </tr>
+            <tr>
+                <td><a href="햄깅/토낑이.png" target="_blank">토낑이</a></td>
+                <td>토끼</td>
+                <td>여자</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<hr>
+
+<section style="text-align: center;">
+    <h2>햄깅 영상 관람</h2>
+    <video src="햄깅/햄깅샤넬.mp4" controls style="width: 100%; max-width: 300px;"></video>
+</section>
+
+<a href="#맨위" class="top-link">▲ 다시 읽어보기 (맨 위로)</a>
+
+</body>
+</html>
+
+#이상
