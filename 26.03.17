@@ -1,0 +1,197 @@
+자바프로그램의 기본 구조
+클래스 = 객체
+클래스->값과 기능으로 나뉨
+
+함수 = 메소드 라 칭함
+
+실습
+/* 
+* 소스파일: Hello.java
+*/
+public class Hello {   -<시작        
+public static int sum(intn, int m) {    -  //시작 메소드(함수)
+return n + m;
+}                                       -  //끝 메소드(함수)
+// main() 메소드에서실행 시작
+public static void main(String[] args) {    -  //메소드(함수)
+int i = 20;
+int s;
+char a;
+}
+s = sum(i, 10); // sum() 메소드 호출
+a = '?';
+System.out.println(a); // 문자 '?' 화면 출력
+System.out.println("Hello"); // "Hello" 문자열 화면 출력
+System.out.println(s); // 정수 s 값 화면 출력
+ }                                          -  //끝 메소드(함수)
+}     <-//끝
+특성=>값=>명사적표현
+행위=>기능=>동사적표현
+함수 종류(형태) => 4가지
+입력 - o,x
+출력 - o,x
+
+' ' = 문자
+" " = 문자열
+a = 변수(명) or 식별자
+'a' = 문자상수
+"a" = 문자열상수
+'ab' = 오류(존재불가)
+
+코드의 설명
+클래스 만들기
+  public class Hello{
+  }
+  class 키워드로 클래스 선언
+  public 선언하면 다른 클래스에서 접근 가능
+  클래스 코드는 {} 내에 모두 작성
+
+주석문
+  // - 한라인 주석
+  /* 여러 행 주석 */
+
+main() 메소드
+  자바 프로그램은 main()에서 실행 시작
+  public static void main(String[] args) {
+  }
+  public static void으로 선언
+  String[] args로 실행 인자를 전달 받음
+
+메소드
+  C/C++에서의 함수를 메소드로 지칭
+  piblic static int sum(intn, int m) {
+  ...
+  }
+  클래스 바깥에 작성할 수 없음
+
+메소드 호출
+  sum() 메소드 호출
+  int i = 20;
+  s = sum(i,10);
+  sum() 호출 시 변수 i의 값과 정수 10을 전달
+  sum()의 n, m에 각각 20,10 값 전달
+  sum()은 n과 m 값을 더한 30리턴
+  변수 s는 정수 30을 전달받음
+
+변수선언
+  변수타입과 변수 이름 선언
+  int i=20;
+  char a;
+  메소드 내에서 선언된 변수는 지역 변수
+  지역 변수는 메소드 실행이 끝나면 자동 소명
+
+  문장
+    ;로 한 문장의 끝을 인식
+    int i=20;
+    s = sum(i,20);
+    int
+    a
+    ;      //이것도 가능
+
+  화면 출력
+    표준 출력 스트림에 메시지 출력
+        System.out.println("Hello"); //"Hello" 화면 출력
+      표준 출력 스트림 System.out의  println() 메소드 호출
+      println()은 여러 타입의 데이터 출력 가능
+      println()은 출력 후 다음 행으로 커서 이동
+      
+식별자
+  클래스,변수,상수,메소드 등에 붙이는 이름
+
+식별자의 원칙
+  '@','#','!'와 같은 특수 문자, 공백 또는 탭은 식별자로 사용할 수 없으나 '_','$'는 사용 가능.
+  유니코드문자 사용 가능. 한글 사용 가능.
+  자바 언어의 키워드는 식별자로 사용 불가.
+  식별자의 첫 번째 문자로 숫자는 사용불가.
+  '_' 또는 '$'를 식별자 첫 번째 문자로 사용할 수 있으나 일반적으로 잘 사용하지 않는다.
+  불린 리터널(true, false)과 널 리터널(null)은 식별자로 사용불가
+  길이 제한 없음
+
+대소문자 구별
+  Test와 test는 별개의 식별자
+
+
+자바의 데이터 타입
+  기본타입 : 8개
+    boolean
+    char = 1byte
+    byte
+    short
+    int = 4byte
+    long = 8byte
+    float = 4byte
+    double = 8byte
+문자: char =1byte
+정수: int = 4byte
+실수: double = 8byte
+
+레퍼런스 타입: 1개이며 용도는 다음 3가지
+  배열(array)에 대한 레퍼런스
+  클래스(class)에 대한 레퍼런스
+  인터페이스(interface)에 대한 레퍼런스
+
+변수
+  프로그램 실행 중에 값을 임시로 저장하기 위한 공간
+  데이터 타입에서 정한 크기의 메모리 할당
+
+변수 선언
+  변수의 타입 다음에 변수 이름을 적어 변수를 선언
+    int price
+    데이터타입  변수이름
+
+정수 이터럴
+  프로그램에서 직접 표현한 값
+  정수,실수,문자,논리,문자열 이터럴 있음
+    사례) 34,42.195. '%', true, "hello"
+
+실수 이터럴
+  소수점 형태나 지수 형태로 표현한 실수
+    12.12.0. 1234.0. 1234    1234E-4
+  숫자 뒤에 f(float) 나 d(double)을 명시적으로 붙이기도 함
+    float f=0.12234F;
+    double w=.1234D; //.1234와 1234 는 동일
+
+
+변수,리터럴, 상수 활용
+
+    package ex00;
+
+public class CircleArea {
+	public static void main(String[] args) {
+		final double PI = 3.1415;
+		
+		double radius = 10.0;
+		double circleArea = radius*radius*PI; //원의 면적 계산
+		
+		//원의 면적을 화면에 출력한다
+		System.out.println("원의 면적 = " + circleArea);
+	}
+}
+
+타입변환 예제과제
+
+package ex00;
+
+public class TypeConversion {
+	public static void main(String[] args) {
+		byte b = 127;
+		int i = 100;
+		
+		
+		System.out.println(b+i);
+		System.out.println(10/4);
+		System.out.println(10.0/4);
+		System.out.println((char)0x2340041);
+		System.out.println((byte)(b+i));
+		System.out.println((int)2.9 + 1.8);
+		System.out.println((int)(2.9 + 1.8));
+		System.out.println((int)2.9 + (int)1.8);
+	}
+}
+
+Scanner에서 키 입력 받기
+  Scanner는 입력되는 키 값을 공백으로 구분 되는 아이템 단위로 읽음
+  공백 문자,'|t','|f', '|r'' ', '|n'
+  kim, seoul 20 56.1 true => 각각 하나의 토큰이라고 말함.
+  
+    
