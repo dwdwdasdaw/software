@@ -1,0 +1,173 @@
+인터프리터 언어(스크립트 언어)
+  원시코드를 기계어로 변환하는 과정 없이 줄(라이) 단위로 바로 명령어 실행
+  컴파일 언어: 원시코드->기계어 변환->실행파일 생성
+동적 타입 언어
+  변수의 자료 유형(data type)을 실행 중 정하거나, 정해진 자료 변경 가능
+  프로그램밍 유연성 제공
+플랫폼 독립적 언어
+  대부분의 운영체계에서 모두 동작
+  윈도우,리눅스,맥 등
+
+식별자, 변수이름
+  소문자,대문자,숫자,_(underscire)로 조합 가능 (대소문자 구분함)
+  숫자로 시작해서는 안됨
+  키워드를 식별자로 사용할 수 없음
+  특정 심벌을 사용할 수 없음
+  식별자의 길이는 상관없음
+
+들여쓰기
+  c/c++,java 등은 중괄호(braces){} 로 코드의 블록을 정의하지만
+  파이썬에서는 들여쓰기로 코드의 블록으로 정의한다. 사용방법은 tab 사용
+  
+주석
+  #: 한줄일때는사용
+  ''',""" : 한줄이상일때 구간으로 정할때는 따움표를 사용한다.
+
+항등 연산자
+
+x1=5
+y1=5
+x2='Hello'
+y2='Hello'
+x3=[1,2,3]
+y3=[1,2,3]
+
+print(x1 is not y1)
+print(x2 is y2)
+print(x3 is y3)
+
+False
+True
+False
+
+
+name in python
+def outer_function():
+    b=20
+    def inner_func():
+        c=30
+        print(a)
+    inner_func()
+
+a=10
+outer_function()
+
+10
+
+
+def outer_function():
+    a=20
+
+    def inner_function():
+        a=30
+        print('a=',a)
+
+    inner_function()
+    print('a=',a)
+
+a=10
+outer_function()
+print('a=',a)
+
+a= 30
+a= 20
+a= 10
+
+def outer_function():
+    global a
+    a=20
+
+    def inner_function():
+        global a
+        a=30
+        print('a=',a)
+
+a=10
+outer_function()
+print('a=',a)
+
+a= 20
+
+교수님 예제 문제
+def outer_function():
+    global b
+    b=20
+a=10
+outer_function() #이거가 있어야 b값이 나온다
+print(a)
+print(b)
+
+10
+20
+
+if
+num=3
+if num>=0:
+    print("Positive or Zero")
+else:
+    print("Negetive number")
+
+Positive or Zero
+
+
+if,elif,else
+from IPython.core import excolors
+num=3.4
+if num>0:
+    print("Positive number")
+elif num==0:
+    print("Zero")
+else:
+    print("Negative number")
+
+Positive number
+
+
+
+for lopp + ranfe()
+genre=['pop','rock','jazz']
+for i in range(len(genre)):
+    print("I like",genre[i])
+
+I like pop
+I like rock
+I like jazz
+
+a=[1,2,3,4]
+#a의 item 의 총합
+sum=a[0]+a[1]+a[2]+a[3]
+sum=0
+for index in range(len(a)):
+    sum=sum+a[index]
+print(sum)
+10
+
+n= int(input("Enter n:"))
+sum=0
+i=1
+while i <=n:
+    sum=sum+i
+    i=i+1
+    
+print("The sum is",sum)
+Enter n:1
+The sum is 1
+
+
+counter=0
+while counter <3:
+    print("Inside loop")
+    counter=counter+1
+else:
+    print("Inside else")
+    Inside loop
+Inside loop
+Inside loop
+Inside else
+
+for val in "string":
+    if val =="i":
+        ;print(val)
+print("The end")
+i
+The end
