@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경로테스트</title>
+</head>
+<body>
+    <img src="../images/notice.jpg" alt="notice"> <br> 
+    <!-- 부분결로지정 -->
+    <img src="data:image/jpeg;base64,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" alt="햄깅"> <br>  
+<!-- 절대경로지정  -->
+</body>
+</html>
+
+로그인창 만들기
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+		<meta charset="UTF-8">
+		<title>로그인</title>
+  </head>
+  <body>
+	<form>
+    <fieldset>
+      <!-- Do it! 텍스트 필드와 비밀번호 필드가 있는 로그인 폼 만들기 -->
+<label>아 이 디: <input type="text" size="10" maxlength="10"></label><br/>
+<label>비밀번호: <input type="password" size="15" maxlength="10"></label><br/>
+<input type="image" src="./images/login.png"/>
+<!-- <input type="submit" value="로그인"> -->
+<input type="reset" value="cancel">
+    </fieldset>
+  </form>
+  </body>
+</html>
+
+배송지 창 만들기
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+</head>
+<body>
+  <h1>레드향 주문하기</h1>
+  <form action="">
+    <fieldset>
+      <legend>상품 선택</legend>
+     
+    </fieldset>
+
+    <fieldset>
+      <legend>배송 정보</legend>
+      <!-- Do it! 배송 정보 입력하는 폼 만들기 -->
+      <ul>
+        <li>
+          <label for="usre-name">이  름:</label>
+          <input type="text" id="usre-name">
+        </li>
+        <li>
+          <label for="addr">배송주소</label>
+          <input type="url" id="addr">
+        </li>
+        <li>
+          <label for="mail">이메일</label>
+          <input type="email" id="mail">
+        </li>
+        <li>
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone">
+        </li>
+      </ul>
+    </fieldset> 
+    <input type="submit" value="확인"/>
+  </form>
+</body>
+</html>
+
+
+배송 및 주문 요청서 만들기
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+</head>
+<body>
+  <h1>레드향 주문하기</h1>
+  <form>
+    <fieldset>
+      <legend>상품 선택</legend>
+      <!-- Do it! 라디오 버튼과 체크 박스를 사용한 폼 만들기 -->
+ <p><b>주문할 상품을 선택해 주세요</b></p>
+ <ul>
+    <li><input type="checkbox" name="prod" id="p3"/> <label for="p3"> 선물용 3kg
+      <input type="number" min="1" max="5" value="1"> (개)(최대5개)
+    </label></li>
+    <li><input type="checkbox" name="prod" id="p5"/><label for="p5"> 선물용 5kg</label></li>
+    <li><input type="checkbox" name="prod" id="f3"/><label for="f3"> 가정용 3kg</label></li>
+    <li><input type="checkbox" name="prod" id="f5"/><label for="f5"> 가정용 5kg</label></li>  
+ </ul>
+ <p><b>포장 선택</b></p>
+ <ul>
+  <li><label><input type="radio" name="gift" value="yes">선물 포장</label></li>
+  <li><label><input type="radio" name="gift" value="nd">선물 포장 안 함</label></li>
+ </ul>
+    </fieldset>
+    <fieldset>
+      <legend>배송 정보</legend>
+      <ul>
+        <li>
+          <label for="user-name">이름 </label>
+          <input type="text" id="user-name">
+        </li>
+        <li>
+          <label for="addr">배송 주소</label>
+          <input type="text" id="addr">
+        </li>
+        <li>
+          <label for="mail">메일 주소</label>
+          <input type="email" id="mail">
+        </li>        
+        <li>
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone">
+        </li>
+      </ul>  
+      <input type="submit" value="확인"/>
+    </fieldset>      
+  </form>  
+</body>
+</html>
+
+주문 페이지 고정 및 힌트 적용
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+  <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+  <div id="container">
+    <h1>레드향 주문하기</h1>
+    <form>
+      <fieldset>
+        <legend>배송 정보</legend>
+        <!-- Do it! 이름에 autofocus, 연락처에 placeholder 추가하기 -->
+        <ul id="shipping">
+          <li>            
+            <label for="prod" >주문 상품 </label>
+            <input type="text" readonly id="prod" value="상품용 3KG">
+          </li>
+          <li>            
+            <label for="user-name" >이름 </label>
+            <input type="text" id="user-name" required autofocus>
+          </li>
+          <li>
+            <label for="addr">배송 주소</label> 
+            <input type="text" id="addr" required>
+          </li>
+          <li>
+            <label for="mail">이메일</label>
+            <input type="email" id="mail">
+          </li>        
+          <li>
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone" placeholder="하이폰 빼고 입력해주세요(01012345678)"required>
+          </li>
+          <li>
+            <label for="d-day">배송 지정</label>
+            <input type="date" id="d-day" required> <small>(주문일로부터 최소 3일 이후)</small>
+          </li>        
+        </ul>  
+      </fieldset>
+      <div id="buttons">
+        <input type="submit" value="주문하기"> 
+        <input type="reset" value="취소하기">
+      </div>        
+    </form>
+  </div>
+</body>
+</html>
+
+오늘의 과제물 제출
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄깅이 굿즈 신청서</title>
+</head>
+<body>
+
+<h1>
+<b><legend>굿즈숍 방문 목적 조사</legend></b></h1>
+
+<fieldset>
+  <legend>기본 정보</legend>
+
+  <b>이름</b> <input type="text" id="name" required placeholder="햄깅이">
+  <br><br>
+
+  <b>연락처</b> <input type="text" id="phone" required placeholder="010-xxxx-xxxx">
+  <br><br>
+
+  <b>성별</b> 
+  <input type="radio" name="gender" id="male"> <label for="male">남자</label>
+  <input type="radio" name="gender" id="female"> <label for="female">여자</label>
+  <br><br>
+
+  <b>이메일</b> <input type="email" id="email" placeholder="hamgingee@hamging.ee">
+  <br><br>
+
+  <b>비밀번호</b> <input type="password" id="password">
+</fieldset>
+
+<fieldset>
+  <legend>상세 정보</legend>
+<b>가능 날짜</b> <input type="date" id="date" min="2026-03-23" max="2026-03-31" required>
+<br>
+<b>가능 시간</b> 
+<select id="time" required>
+  <option value="">시간 선택</option>
+  <option value="10:00">오전 10:00</option>
+  <option value="11:00">오전 11:00</option>
+  <option value="12:00">오후 12:00</option>
+  <option value="13:00">오후 01:00</option>
+  <option value="14:00">오후 02:00</option>
+  <option value="15:00">오후 03:00</option>
+  <option value="16:00">오후 04:00</option>
+  <option value="17:00">오후 05:00</option>
+  <option value="18:00">오후 06:00</option>
+  <option value="19:00">오후 07:00</option>
+  <option value="20:00">오후 08:00</option>
+</select>
+<br>
+<b>방문 목적</b> 
+<select id="목적" multiple size="1" required>
+<option value="">소장용</option>
+<option value="">선물용</option>
+<option value="">방문</option>
+</select>
+<br>
+
+<b>방문 수단</b> 
+<select id="수단" required>
+<option value="">차량</option>
+<option value="">대중교통</option>
+<option value="">도보</option>
+</select>
+<br>
+  </fieldset>
+
+<fieldset>
+<legend>좋아하는 캐릭터</legend>
+<img src="/토낑이.png">
+<input type="radio" name="character" value="tokking" id="char1">
+    <label for="char1">토낑이</label>
+<img src="/햄깅이.png">
+<input type="radio" name="character" value="tokking" id="char1">
+    <label for="char1">햄깅이</label>
+<img src="/햄둥이.png">
+<input type="radio" name="character" value="tokking" id="char1">
+    <label for="char1">햄둥이</label>
+</fieldset>
+<input type="submit" value="완료">
+<input type="reset" value="취소">
+</body>
+</html>
