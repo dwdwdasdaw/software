@@ -1,0 +1,369 @@
+자바에서 키 입력
+  System.in
+   - 키보드로부터직접읽는자바의표준입력스트림 
+   - 키값을바이트(문자아님)로리턴
+
+  System.in 을 사용할 때 문제점
+   - 키값을바이트데이터로넘겨주므로응용프로그램이문자정보
+   - 로변환해야함
+
+
+Scanner로 쉽게 키 입력
+  Scanner 클래스
+   - System.in에게 키를 읽게 하고, 읽은바이트를문자, 정수, 실수, 
+   - 불린, 문자열 등다양한타입으로변환하여리턴
+
+  객체생성
+    import java.util.Scanner; // import 문 필요
+    ...
+    Scanner a = new Scanner(System.in); // Scanner 객체 생성
+
+Scanner를 이용한 키 입력
+  Scanner에서키 입력 받기
+   - Scanner는 입력되는 키 값을 공백으로구분되는 아이템단위로읽음
+   - 공백문자: ‘\t’, ‘\f’, ‘\r’, ‘ ’, ‘\n’
+
+   개발자가원하는다양한타입의값으로바꾸어읽을수있음
+
+   Scanner를 이용한 키 입력 연습
+   package ex00;
+import java.util.Scanner;
+
+
+public class ScannerEX {
+	
+	public static void main(String args[]) {
+		System.out.println("이름,도시,나이,체중,독신 여부를 빈칸으로 분리하여 입력하세요");
+		Scanner scanner = new Scanner(System.in);
+		
+	String name = scanner.next(); //문자열 읽기
+	System.out.print("이름은" + name +",");
+	
+	String city = scanner.next(); //문자열 읽기
+	System.out.print("도시는" + city +",");
+	
+	int age = scanner.nextInt(); //정수 읽기
+	System.out.print("나이는" + age +"살");
+	
+	double weight = scanner.nextDouble(); //실수 읽기
+	System.out.print("체중은" + weight +"kg");
+	
+	boolean single = scanner.nextBoolean(); //논리값 읽기
+	System.out.print("독신 여부는" + single +"입니다");
+	
+	scanner.close(); //scanner닫기
+  }	
+}
+
+이름,도시,나이,체중,독신 여부를 빈칸으로 분리하여 입력하세요
+JeongEunHO
+이름은JeongEunHO,Seoul
+도시는Seoul,28
+나이는28살,78
+체중은78.0kg,true
+독신 여부는true입니다
+
+/와 % 산술 연산
+
+package ex00;
+
+import java.util.Scanner;
+public class ArithmeticOperator {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("정수를 입력하세요:");
+		int time = scanner.nextInt(); //정수 입력
+		int second = time % 60; //60으로 나눈 나머지는 초
+		int minute = (time / 60)% 60; //60으로 나눈 몫을 다시 60으로 나눈 나머지는 분
+		int hour = (time / 60) / 60; //60으로 나눈 몫을 다시 60으로 나눈 몫은 시간
+		
+		System.out.print(time + "초는");
+		System.out.print(hour + "시간");
+		System.out.print(minute + "분");
+		System.out.print(second + "초입니다.");
+		
+		scanner.close();
+	}
+}
+정수를 입력하세요:100
+100초는0시간1분40초입니다.
+
+대입 연산자와 증감 연산자 사용 
+package ex00;
+
+public class AssignmentIncDecOperator {
+	public static void main(String[] args) {
+		int a=3, b=3,c=3;
+				
+	//대입 연산자 사례
+	a+=3; //a=a+3=6
+	b*=3; //b=b*3=9
+	c%=2; //c=c%2=1
+	System.out.println("a="+",b="+b+",c="+c);
+	
+	int d=3;
+	//증감 연산자 사례
+	a=d++; //a=3,d=4
+	System.out.println("a="+a+",d="+d);
+	a=++d; //d=5,a=5
+	System.out.println("a="+a+",d="+d);
+	a=d--; // a=5,d=4
+	System.out.println("a="+a+",d="+d);
+	a=--d; //d=3,a=3
+	System.out.println("a-"+a+",d="+d);
+	}
+}
+
+a=,b=9,c=1
+a=3,d=4
+a=5,d=5
+a=5,d=4
+a-3,d=3
+
+
+비교 연산과 논리 연사자 사용
+package ex00;
+
+	
+public class LogicalOperator {
+	public static void main (String[] args) {
+		//비교 연산
+		System.out.println('a'>'b');
+		System.out.println(3>=2);
+		System.out.println(-1<0);
+		System.out.println(3.45<=2);
+		System.out.println(3==2);
+		System.out.println(3!=2);
+		System.out.println(!(3!=2));
+		
+		//비교 연산과 논리 연산 복함
+		System.out.println((3>2)&&(3>4));
+		System.out.println((3!=2)||(-1>0));
+		System.out.println((3!=2)^(-1>0));
+	}
+}
+
+false
+true
+true
+false
+false
+true
+false
+false
+true
+true
+
+비트 논리 연산과 비트 시프트 연산
+package ex00;
+
+public class BitOperator {
+	public static void main(String[] args) {
+		short a = (short)0x55ff;
+		short b = (short)0x00ff;
+		
+		//비트 논리 연산
+		System.out.println("[비트 연산 결과]");
+		System.out.printf("%04x\n",(short)(a&b)); //비트AND
+		System.out.printf("%04x\n",(short)(a|b)); //비트OR
+		System.out.printf("%04x\n",(short)(a^b)); //비트XOR
+		System.out.printf("%04x\n",(short)(~a)); //비트NOT
+		
+		byte c = 20; //0x14
+		byte d = -8; //0xf8
+		
+		//비트 시프트 연산
+		System.out.println("[시프트 연산 결과]");
+		System.out.println(c<<2); //c를 2비트 왼쪽 시프트
+		System.out.println(c>>2); //c를 2비트 오른쪽 시프트. 0삽입
+		System.out.println(d>>2); //d를 2비트 오른쪽 시프트. 1삽입
+		System.out.printf("%x\n",(d>>>2)); //d를 2비트 오른쪽 시프트. 0사입
+	}
+}
+[비트 연산 결과]
+00ff
+55ff
+5500
+aa00
+[시프트 연산 결과]
+80
+5
+
+if문 사용하기
+package ex00;
+import java.util.Scanner;
+
+public class SuccessOrFail {
+	public static void main(String[]args){
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("점수를 입력하시오:");
+		int score = scanner.nextInt();
+		if(score>=80)
+			System.out.println("축하합니다!합격입니다.");
+		
+		scanner.close();
+	}
+}
+
+점수를 입력하시오:
+95
+축하합니다!합격입니다.
+
+if-else 사용하기
+package ex00;
+import java.util.Scanner;
+public class MultipleOfThree {
+	public static void main(String[]args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("수를 입력하시오:");
+		int number = in.nextInt();
+		
+		if(number%3==0)
+			System.out.println("3의 배수입니다.");
+		else
+			System.out.println("3의 배수가 아닙니다.");
+		
+		in.close();
+	}
+}
+
+수를 입력하시오:
+129
+3의 배수입니다.
+
+
+다중 if-else로 학점 매기기
+package ex00;
+import java.util.Scanner;
+public class Grading {
+	public static void main(String[]args) {
+		char grade;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("점수를 입력하세요(0~100):");
+		int score = scanner.nextInt(); //점수 읽기
+		if(score >= 90) // score가 90이상
+			grade='A';
+		else if(score>=80) // score가 80이상 90미만
+			grade='B';
+		else if(score>=70) // score가 70이상 80미만
+			grade='C';
+		else if(score>=60) // score가 60이상 70미만
+			grade='D';
+		else //score가 60미만
+			grade='F';
+		System.out.println("학점은"+grade+"입니다");
+		
+		scanner.close();
+	}
+}
+
+점수를 입력하세요(0~100):
+89
+학점은B입니다
+
+if-else 문 사례
+package ex00;
+import java.util.Scanner;
+public class NestedIf {
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("점수를 입력하세요(0~100):");
+		int score = scanner.nextInt();
+		
+		System.out.println("학년을 입혁하세요(1~4):");
+		int year = scanner.nextInt();
+		
+		if(score >=60) {//60점 이상
+			if(year !=4)
+				System.out.println("합격!"); //4학년 아니면 합격
+			else if(score >=70)
+				System.out.println("합격!"); //4학년이 70점 이상이면 합격
+			else
+				System.out.println("불합격!"); //4학년이 70점 미난이면 불합격
+		}
+		else //60점 미만 불합격
+			System.out.println("불합격");
+		
+		scanner.close();
+	}
+}
+
+점수를 입력하세요(0~100):
+65
+학년을 입혁하세요(1~4):
+4
+불합격!
+
+switch 문으로 학점 매기기
+package ex00;
+import java.util.Scanner;
+public class GradingSwitch {
+	public static void main (String[]ARGS) {
+		Scanner scanner = new Scanner(System.in);
+		
+		char grade;
+		System.out.println("점수를 입력하세요(0~100):");
+		int score = scanner.nextInt();
+		switch (score/10) {
+		case 10: //score =100
+		case 9: //score =90~99
+			grade = 'A';
+			break;
+		case 8: //score는 80~89
+			grade = 'B';
+			break;
+		case 7: //score는 70~79
+			grade = 'C';
+			break;
+		case 6: //score는 60~69
+			grade = 'D';
+			break;
+		default: // score는 59 이하
+		grade = 'F';
+		}
+		System.out.println("학점은" +grade+"입니다");
+		scanner.close();
+	}
+}
+
+점수를 입력하세요(0~100):
+89
+학점은B입니다
+
+switch 문 활용
+package ex00;
+import java.util.Scanner;
+public class CoffeePrice {
+public static void main(String[]args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	System.out.println("무슨 커피 드릴까요?");
+	String order = scanner.next();
+	int price=0;
+	switch (order) {
+		case"에스프레소":
+		case"카푸치노":
+		case"카페라떼":
+			price=3500;
+			break;
+		case"아메리카노":
+			price=2000;
+			break;
+		default:
+			System.out.println("메뉴는 없습니다!");
+	}
+	if(price!=0)
+		System.out.println(order+"는"+price+"원 입니다");
+	scanner.close();
+}
+}
+
+무슨 커피 드릴까요?
+에스프레소
+에스프레소는3500원 입니다
+
