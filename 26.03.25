@@ -43,3 +43,43 @@ elif 사용자_가바보 == '가위':
   pass
 elif 사용자_가바보 == '보':
 
+복습과정
+1.데이터의 상태를 나타낼때
+  True,Folse: 참과 거짓을 나타냅니다.(첫글자는 대문자 사용!)
+  None: "값이 없다"라는 의미
+    is_coding_fun = True
+    empty_data = None
+2.조건에 따라 행동할 떄(조건문)
+  if,elif,else: 조건에 따라 코드를 실행할때
+  and,or,not: 조건을 여러 개 묶거나 반대로 뒤집을 때 
+    score = 85
+    if score >= 90:
+        print("A학점")
+    elif score >= 80 and score < 90:  # 80점 이상 '이면서' 90점 미만 #80점 이상 이면서 90점 미만
+        print("B학점")
+    else:
+        print("파이팅!")
+3.같은 일을 반복할 때(반복문)
+  for,whil: 반복을 시킬때
+  break: 반복문을 끝낼때
+  continue: 이번은 건너 뛰고 다음 반복할때
+  in: 리스트 안에 특정 값이 있는지 확인 할 때
+    cafes=["성수카페", "강남카페", "홍대카페"]
+    for cafe in cafe: # 리스트 안에(in) 있는 카페를 하나씩 꺼내기
+      print(cafe)
+4.함수 만들 때
+  def: 함수를 정의(define) 할때
+  return: 함수의 결과값을 돌릴때
+  lambda: 아주 짧은 일회용 함수를 만들 때
+      def add(a, b):
+        return a+b  # 결과를 돌려줄 때
+5.외부에서 가져올때
+  import: 다른 사람이 만든 코드나 라이브러리를 가져올때 사용
+  form,as: 특정 부분만 가져오거나(for), 이름을 별명으로 지어줄 때(as) 사용
+    import cv2 as cv  # OpenCV를 가져와서 cv라는 짧은 이름으로 부리기
+6.오류가 날 것 같은 상황을 대비 할때 
+  try,except,finally: 에러가 나도 프로그램이 멈추지 않게 보호 해야 할때 사용
+    try:
+      print(10/0) # 0으로 나누면 에러가 나지만
+    except:
+      print("0으로 나눌 수 없습니다!") # 여기서 대신 처리함
